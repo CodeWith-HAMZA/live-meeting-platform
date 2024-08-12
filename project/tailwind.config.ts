@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 const { fontFamily } = require("tailwindcss/defaultTheme");
-1;
+
 const config = {
   darkMode: ["class"],
   content: [
@@ -25,6 +25,7 @@ const config = {
       colors: {
         dark: {
           1: "#1C1F2E",
+          2: '#161925'
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
