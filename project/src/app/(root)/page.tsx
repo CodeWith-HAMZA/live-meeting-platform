@@ -1,129 +1,29 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import React from "react";
+import MeetingTypeList from '@/components/MeetingTypeList';
 
-export default function page() {
-  // return <aside className="fixed inset-y-0 left-0 z-10 flex h-full w-64 flex-col border-r bg-background">
-  //   <div className="flex h-16 shrink-0 items-center px-6">
-  //     <Link href="#" className="flex items-center gap-2 font-bold" prefetch={false}>
-  //       {/* <ChromeIcon className="h-6 w-6" /> */}
-  //       <span className="sr-only">Google</span>
-  //     </Link>
-  //   </div>
-  //   <nav className="flex flex-1 flex-col overflow-y-auto">
-  //     <div className="space-y-1 px-4 py-2">
-  //       <h3 className="px-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">General</h3>
-  //       <Link
-  //         href="#"
-  //         className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground data-[active=true]:bg-accent data-[active=true]:text-accent-foreground"
-  //         aria-current="page"
-  //         prefetch={false}
-  //       >
-  //         {/* <HomeIcon className="h-5 w-5" /> */}
-  //         Home
-  //       </Link>
-  //       <Link
-  //         href="#"
-  //         className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-  //         prefetch={false}
-  //       >
-  //         {/* <SearchIcon className="h-5 w-5" /> */}
-  //         Search
-  //       </Link>
-  //       <Link
-  //         href="#"
-  //         className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-  //         prefetch={false}
-  //       >
-  //         {/* <MapIcon className="h-5 w-5" /> */}
-  //         Maps
-  //       </Link>
-  //     </div>
-  //     <div className="space-y-1 px-4 py-2">
-  //       <h3 className="px-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">Gmail</h3>
-  //       <Link
-  //         href="#"
-  //         className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-  //         prefetch={false}
-  //       >
-  //         {/* <InboxIcon className="h-5 w-5" /> */}
-  //         Inbox
-  //       </Link>
-  //       <Link
-  //         href="#"
-  //         className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-  //         prefetch={false}
-  //       >
-  //         {/* <SendIcon className="h-5 w-5" /> */}
-  //         Sent
-  //       </Link>
-  //       <Link
-  //         href="#"
-  //         className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-  //         prefetch={false}
-  //       >
-  //         {/* <FileIcon className="h-5 w-5" /> */}
-  //         Drafts
-  //       </Link>
-  //       <Link
-  //         href="#"
-  //         className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-  //         prefetch={false}
-  //       >
-  //         {/* <Trash2Icon className="h-5 w-5" /> */}
-  //         Trash
-  //       </Link>
-  //     </div>
-  //     <div className="space-y-1 px-4 py-2">
-  //       <h3 className="px-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">Drive</h3>
-  //       <Link
-  //         href="#"
-  //         className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-  //         prefetch={false}
-  //       >
-  //         {/* <HardDriveIcon className="h-5 w-5" /> */}
-  //         My Drive
-  //       </Link>
-  //       <Link
-  //         href="#"
-  //         className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-  //         prefetch={false}
-  //       >
-  //         {/* <UsersIcon className="h-5 w-5" /> */}
-  //         Shared
-  //       </Link>
-  //       <Link
-  //         href="#"
-  //         className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-  //         prefetch={false}
-  //       >
-  //         {/* <ClockIcon className="h-5 w-5" /> */}
-  //         Recent
-  //       </Link>
-  //       <Link
-  //         href="#"
-  //         className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-  //         prefetch={false}
-  //       >
-  //         {/* <StarIcon className="h-5 w-5" /> */}
-  //         Starred
-  //       </Link>
-  //     </div>
-  //     <div className="space-y-1 px-4 py-2">
-  //       <h3 className="px-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">Calendar</h3>
-  //       <Link
-  //         href="#"
-  //         className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-  //         prefetch={false}
-  //       >
-  //         {/* <CalendarIcon className="h-5 w-5" /> */}
-  //         Calendar
-  //       </Link>
-  //     </div>
-  //   </nav>
-  // </aside>
+const Home = () => {
+  const now = new Date();
 
-  return <div className="">
-    <Button >Home Layout</Button>
-  </div>
-}
+  const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+  const date = (new Intl.DateTimeFormat('en-US', { dateStyle: 'full' })).format(now);
+
+  return (
+    <section className="flex size-full flex-col gap-5 text-white">
+      <h2 className='text-3xl font-bold'>Welcome To Casual Meet</h2>
+      <div className="h-[303px] w-full rounded-[20px] bg-hero bg-cover">
+        <div className="flex h-full flex-col justify-between max-md:px-5 max-md:py-8 lg:p-11">
+          <h2 className="glassmorphism max-w-[273px] rounded py-2 text-center text-base font-normal">
+            {/* Upcoming Meeting at: 12:30 PM */}
+          </h2>
+          <div className="flex flex-col gap-2">
+            <h1 className="text-4xl font-extrabold lg:text-7xl">{time}</h1>
+            <p className="text-lg font-medium text-sky-1 lg:text-2xl">{date}</p>
+          </div>
+        </div>
+      </div>
+
+      <MeetingTypeList />
+    </section>
+  );
+};
+
+export default Home;

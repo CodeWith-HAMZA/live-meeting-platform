@@ -6,6 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/providers/theme-provider";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -22,26 +23,29 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          //   "min-h-screen bg-background font-sans antialiased ",
-          "font-sans antialiased ",
-          fontSans.variable
-        )}
-      >
+    <ClerkProvider>
 
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
+      <html lang="en" suppressHydrationWarning>
+        <body
+          className={cn(
+            //   "min-h-screen bg-background font-sans antialiased ",
+            "font-sans antialiased ",
+            fontSans.variable
+          )}
         >
 
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
 
-          {children}
-        </ThemeProvider>
-      </body>
-    </html>
+
+            {children}
+          </ThemeProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
