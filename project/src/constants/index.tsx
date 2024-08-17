@@ -1,3 +1,7 @@
+export const streamAppId = "1331043"
+export const streamApiKey = 'drrn9y66e39h'
+export const streamApiSecret = 'zdr5bvkz65x6a6uy5gnjmhhwj57rcdpuzk8a6kqpjy3a52jkvxrf6ev9ynjfmjbx'
+
 export const sidebarLinks = [
   {
     imgURL: '/icons/Home.svg',

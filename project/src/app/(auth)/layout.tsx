@@ -22,30 +22,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <ClerkProvider>
-
-      <html lang="en" suppressHydrationWarning>
-        <body
-          className={cn(
-            //   "min-h-screen bg-background font-sans antialiased ",
-            "font-sans antialiased ",
-            fontSans.variable
-          )}
-        >
-
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          >
-
-
-            {children}
-          </ThemeProvider>
-        </body>
-      </html>
-    </ClerkProvider>
-  );
+  return children;
 }

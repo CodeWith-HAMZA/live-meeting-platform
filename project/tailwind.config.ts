@@ -42,7 +42,7 @@ const config = {
           1: '#830EF9',
         },
         yellow: {
-          1: '#F9A90E',
+          1: 'green',
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

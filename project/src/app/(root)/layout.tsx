@@ -7,6 +7,7 @@ import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 import Sidebar from "@/components/shared/Sidebar";
 import Nav from "@/components/shared/Nav";
+import StreamClientProvider from "@/providers/streamClient-provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -23,20 +24,24 @@ export default function HomeLayout({
   children: React.ReactNode;
 }>) {
   return (
+
     <main className="relative">
-      <Nav />
-      <div className="flex">
+      <StreamClientProvider>
+        <Nav />
+        <div className="flex">
 
 
-        <Sidebar />
-        <section className="flex flex-col min-h-screen flex-1 px-6 pb-6 pt-28 max-md:pb-14 sm:px-14">
-          <div className="w-full">
-            {children}
-          </div>
+          <Sidebar />
+          <section style={{ overflowY: "scroll" }} className="flex flex-col h-screen flex-1 px-6 pb-6 pt-28 max-md:pb-14 sm:px-14">
+            <div className="w-full">
 
-        </section>
+              {children}
+            </div>
 
-      </div>
+          </section>
+
+        </div>
+      </StreamClientProvider>
     </main>
   );
 }

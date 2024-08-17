@@ -11,7 +11,7 @@ export default function Nav() {
     <nav className='flex-between fixed  bg-secondary z-50 w-full px-6 py-4 lg:px-10'>
       <Link href={'/'} className='flex items-center gap-3'>
         <Video size={30} />
-        <p className='text-2xl font-bold '>Casual Meet</p>
+        <p className='text-3xl font-bold '>Casual Meet</p>
       </Link>
 
       <div className="ico flex-center">
