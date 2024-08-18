@@ -14,7 +14,7 @@ export default function Meeting({ params }: { params: { id: string } }) {
   const [isSetupComplete, setIsSetupComplete] = useState(false)
   const { call, loading } = useGetCallById(params.id)
   const client = useStreamVideoClient()
- 
+
   useEffect(() => {
     if (!isLoaded || loading) return;
 
@@ -31,7 +31,10 @@ export default function Meeting({ params }: { params: { id: string } }) {
 
         <StreamTheme>
 
-          {!isSetupComplete ? <MeetingSetup /> : <MeetingRoom />}
+
+
+
+          {!isSetupComplete ? <MeetingSetup setIsSetupComplete={setIsSetupComplete} /> : <MeetingRoom />}
 
         </StreamTheme>
       </StreamCall>

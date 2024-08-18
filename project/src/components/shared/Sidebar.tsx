@@ -22,7 +22,7 @@ export default function Sidebar() {
                     })}>
                         <Image src={imgURL} width={18} height={18} alt={'url'} />
 
-                        <p className="font-semibold text-xl">
+                        <p className="font-semibold text-md">
                             {label}
                         </p>
                     </Link>
