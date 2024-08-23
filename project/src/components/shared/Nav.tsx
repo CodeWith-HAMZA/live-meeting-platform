@@ -1,17 +1,21 @@
-import { cn } from '@/lib/utils'
-import { Camera, CameraIcon, Menu, Video } from 'lucide-react'
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
-import MobileNav from './MobileNav'
-import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
+import { cn } from "@/lib/utils";
+import { Camera, CameraIcon, Menu, Video } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import MobileNav from "./MobileNav";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 export default function Nav() {
   return (
-    <nav className='flex-between fixed  bg-secondary z-50 w-full px-6 py-4 lg:px-10'>
-      <Link href={'/'} className='flex items-center gap-3'>
+    <nav className="flex-between fixed  bg-secondary z-50 w-full px-6 py-4 lg:px-10">
+      <div className="block  xl:hidden">
+        <MobileNav />
+      </div>
+
+      <Link href={"/"} className="flex items-center gap-3">
         <Video size={30} />
-        <p className='text-3xl font-bold '>Casual Meet</p>
+        <p className="text-xl font-bold ">Casual Meet</p>
       </Link>
 
       <div className="ico flex-center">
@@ -21,8 +25,7 @@ export default function Nav() {
         <SignedIn>
           <UserButton />
         </SignedIn>
-        <MobileNav />
       </div>
     </nav>
-  )
+  );
 }

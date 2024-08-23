@@ -10,7 +10,7 @@ import { usePathname } from "next/navigation";
 export default function Sidebar() {
     const path = usePathname()
 
-    return <section className="left-0 top-0 w-fit h-screen flex flex-col justify-between p-6 pt-28 text-white max-sm:hidden lg:w-[220px] bg-secondary">
+    return <section className="left-0 top-0 w-fit h-screen flex flex-col justify-between p-6 pt-28 text-white max-xl:hidden lg:w-[260px] bg-secondary">
         <div className="flex flex-col gap-6">
             {
                 sidebarLinks.map(({ route, label, imgURL }) => {
