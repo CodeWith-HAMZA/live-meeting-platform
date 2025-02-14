@@ -31,7 +31,7 @@ A powerful real-time meeting platform designed to enhance virtual collaboration 
   - TypeScript
 
 ## Some Screen Shots
-
+![Image](https://github.com/user-attachments/assets/4965b361-6415-428b-9b18-f91b0f3b59f2)
 ![image](https://github.com/user-attachments/assets/62167917-42b3-4699-b27f-b77aa76ede13)
 ![image](https://github.com/user-attachments/assets/8187e905-c614-406b-997b-b0eb9f7e9bf3)
 ![image](https://github.com/user-attachments/assets/487cb53c-5286-43ce-af4b-7221035f9e24)
